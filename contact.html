@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Chris Wachira</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Luffy Dev</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <button id="theme-toggle">🌙 Dark Mode</button>
+    </nav>
+
+    <main class="container">
+        <section class="content-section">
+            <h2>Get In Touch</h2>
+            <div class="contact-details">
+                <p>Email: <a href="mailto:kinckworks@gmail.com">kinckworks@gmail.com</a></p>
+                <p>WhatsApp: +254 746 230 603</p>
+            </div>
+
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Your Name">
+                    <small class="error" id="nameError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Your Email">
+                    <small class="error" id="emailError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" rows="5" placeholder="Write your message..."></textarea>
+                    <small class="error" id="messageError"></small>
+                </div>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Chris Wachira.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
