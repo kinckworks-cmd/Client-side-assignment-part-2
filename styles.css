@@ -1,0 +1,90 @@
+/* CSS Variables for Color Scheme */
+:root {
+    --bg-color: #f4f4f9;
+    --text-color: #333;
+    --primary-color: #6c63ff; /* Colorful accent */
+    --secondary-color: #333;
+    --card-bg: #ffffff;
+    --nav-bg: #ffffff;
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --primary-color: #bb86fc;
+    --secondary-color: #03dac6;
+    --card-bg: #1e1e1e;
+    --nav-bg: #1f1f1f;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--nav-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); }
+
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { text-decoration: none; color: var(--text-color); font-weight: 500; }
+.nav-links a:hover, .nav-links a.active { color: var(--primary-color); }
+
+/* Main Layout */
+.container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; flex: 1; }
+
+/* Hero Section */
+.hero { text-align: center; padding: 3rem 0; }
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.bio { font-size: 1.1rem; line-height: 1.6; max-width: 600px; margin: 0 auto 2rem; }
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+    display: inline-block;
+}
+.primary { background-color: var(--primary-color); color: #fff; }
+.secondary { border: 2px solid var(--primary-color); color: var(--text-color); }
+
+/* Cards (for Skills, Education, etc.) */
+.card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Forms */
+.form-group { margin-bottom: 15px; }
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.error { color: #ff4d4d; font-size: 0.8rem; }
+
+footer { text-align: center; padding: 1rem; margin-top: auto; opacity: 0.7; }
